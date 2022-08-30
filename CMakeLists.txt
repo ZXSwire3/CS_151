@@ -3,5 +3,5 @@ project(CS_151)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(SortNumbers Mod1/HW1/SortNumbers/main.cpp)
-add_executable(SortCountries Mod1/HW1/SortCountries/main.cpp Mod1/HW1/SortCountries/Country.cpp)
+add_executable(SortNumbers Mod1/HW1/SortNumbers/SortNumbers.cpp)
+add_executable(SortCountries Mod1/HW1/SortCountries/SortCountries.cpp Mod1/HW1/SortCountries/Country.cpp)

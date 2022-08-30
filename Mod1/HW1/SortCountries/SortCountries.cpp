@@ -1,3 +1,21 @@
+/* SortCountries - Sorts countries and inserts them into a vector
+ * Author: Ben Foltz
+ * Module: 1
+ * Project: Homework 1, project 2
+ * Problem Statement: This program generates creates countries and then sorts them from smallest to biggest area into a
+ *                    vector.
+ * Algorithm:
+ * 1. Create countries vector
+ * 2. Create countries and call countryInsert
+ * 3. Print heading
+ *    countryInsert(vector<Country> countries, Country country)
+ * 4. Create iterator
+ * 5. if vector is empty
+ * 6. push country into vector
+ * 7. else loop through the countries in the vector and exit the loop when the country's area in the vector is greater
+ *      than the current one
+ * 8. Insert country into vector
+ */
 #include "Country.h"
 
 #include <iostream>
