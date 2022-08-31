@@ -64,7 +64,7 @@ int main() {
     }
 
     //Print vector from biggest to smallest
-    cout << endl << "big to small: ";
+    cout << "big to small: ";
     for (int i = 0; i < numSize; i++) {
         if (i == numSize - 1) {
             cout << numbers.at(i) << endl;
@@ -73,10 +73,10 @@ int main() {
         }
     }
 
+    int count = 0;
     //Print vector from smallest to biggest
     cout << "small to big: ";
     while (!numbers.empty()) {
-        int count = 0;
         if (count == numSize - 1) {
             cout << numbers.back();
             numbers.pop_back();

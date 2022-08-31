@@ -59,12 +59,19 @@ int main() {
     Country venezuela("Venezuela", 28102, 353748);
     countryInsert(countries, venezuela);
 
+    int totalPopulation = 0;
+    int totalArea = 0;
+
     //Print out the countries
     cout << right << setw(12) << "Country" << left << setw(6) << "" << "Population" << left << setw(5) << "" << "Area" << endl;
     cout << left << setw(18) << "----------------" << left << setw(12) << "----------" << left << setw(12) << "----------" << endl;
     for (int i = 0; i < countries.size(); i++) {
         cout << left << setw(18) << countries[i].getName() << right << setw(10) << countries[i].getPopulation() << right << setw(12) << countries[i].getArea() << endl;
+        totalPopulation += countries[i].getPopulation();
+        totalArea += countries[i].getArea();
     }
+    cout << left << "----------------------------------------" << endl
+         << "Total" << right << setw(23) << totalPopulation << right << setw(12) << totalArea;
 }
 
 void countryInsert(vector<Country> &countries, Country country) {
