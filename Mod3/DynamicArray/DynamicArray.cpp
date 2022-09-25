@@ -1,3 +1,52 @@
+/* DynamicArray - Dynamically allocates an array of Students and holds the student's name and test score
+ * Author: Ben Foltz
+ * Module: 3
+ * Project: Homework 3, project 1
+ * Problem Statement: This program dynamically allocates an array of Students and holds the student's name and test score.
+ * Algorithm:
+ * 1. Class Student
+ *    a. Instantiate string name
+ *    b. Instantiate int score
+ *    c. Create constructor and destructor
+ *    d. Create getters and setters for name and score
+ * 2. void sort(Student array[], int size)
+ *    a. Instantiate string tempName
+ *    b. Instantiate int tempScore
+ *    c. Use a for loop from 0 to size - 1
+ *       i. Use a for loop from i + 1 to size
+ *          1. if score at array[i] > score at array[j]
+ *              a. tempName = array[j].getName()
+ *              b. tempScore = array[j].getScore()
+ *              c. value at array[j] = array[i]
+ *              d. set name at array[i] = tempName
+ *              e. set score at array[i] = tempScore
+ * 3. getAverage(Student array[], int size)
+ *    a. Instantiate int sum = 0
+ *    b. Instantiate double average
+ *    c. Use a for loop from 0 to size
+ *       i. add score at array[i] to sum
+ *    d. Average = sum / size
+ *    e. return average
+ * 4. int main()
+ *    a. Instantiate int *numberOfTest = new int
+ *    b. Prompt user for number of test to be input
+ *    c. Instantiate dynamically allocated array of Students with size numberOfTests
+ *    d. Instantiate string *name
+ *    e. Instantiate int *score
+ *    f. Use a for loop from 0 to *numberOfTests
+ *       i. Prompt user for student name
+ *      ii. Prompt user for student score
+ *     iii. while (*score < 0)
+ *          1. Print error
+ *          2. Prompt user for student score
+ *      iv. Set name of the student
+ *       v. Set score of the student
+ *    g. sort(studentScores, *numberOfTests)
+ *    h. Use a for loop from 0 to *numberOfTests
+ *       i. Print student's name and score
+ *    i. Print average score
+ *    j. delete dynamically allocated array
+ */
 #include <iostream>
 #include <iomanip>
 
@@ -104,15 +153,15 @@ void sort(Student array[], int size) {
 //Calculate the average score
 double getAverage(Student array[], int size) {
     int sum = 0;
-    double avg;
+    double average;
 
     //Loop through the entire array and add to the sum
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < size; i++) {
         sum += array[i].getScore();
     }
     //Divide sum by size
-    avg = double(sum) / size;
+    average = double(sum) / size;
 
     //return average
-    return avg;
+    return average;
 }

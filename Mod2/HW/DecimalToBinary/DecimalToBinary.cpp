@@ -15,7 +15,6 @@
  * 9. Print number and pop vector
  */
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
