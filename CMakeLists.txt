@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD 14)
 #Module 2
 #add_executable(pi Mod2/review.cpp)
 add_executable(DtB Mod2/HW/DecimalToBinary/DecimalToBinary.cpp)
-
+#Module 3
 add_executable(DanglingPointers Mod3/Lab/DanglingPointers.cpp)
 add_executable(DynamicArray Mod3/DynamicArray/DynamicArray.cpp)
+add_executable(Pie Mod3/Pie/Pie.cpp)
