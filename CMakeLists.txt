@@ -10,3 +10,4 @@ add_executable(pi Mod2/review.cpp)
 add_executable(DtB Mod2/HW/DecimalToBinary/DecimalToBinary.cpp)
 
 add_executable(DanglingPointers Mod3/Lab/DanglingPointers.cpp)
+add_executable(DynamicArray Mod3/DynamicArray/DynamicArray.cpp)
