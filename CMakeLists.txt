@@ -14,3 +14,4 @@ set(CMAKE_CXX_STANDARD 14)
 #add_executable(Pie Mod3/Pie/Pie.cpp)
 #Module 4
 add_executable(Time Mod4/Lab4/Time.cpp)
+add_executable(DisplayBox Mod4/DisplayBox/DisplayBox.cpp)
