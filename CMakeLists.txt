@@ -18,3 +18,4 @@ add_executable(DisplayBox Mod4/DisplayBox/DisplayBox.cpp)
 
 add_executable(Gym Mod5/Lab/Gym/Gym.cpp)
 add_executable(CopyConstructor Mod5/Lab/CopyConstructor/CopyConstructor.cpp)
+add_executable(Numbers Mod5/Numbers.cpp)
