@@ -1,4 +1,4 @@
-// String.h
+// EString.h
 // Author: Ben Foltz
 #ifndef CS_151_STRING_H
 #define CS_151_STRING_H
@@ -8,48 +8,48 @@
 
 using namespace std;
 
-class String {
+class EString {
     private:
         char *string;
         int size;
 
     public:
-        String(const char *s = ""); //constructor
-        ~String();                  //destructor
+        EString(const char *s = ""); //constructor
+        ~EString();                  //destructor
         void print();               //print the string
         void change(const char *);  //reassign the string
-        String(const String &);     //copy constructor
+        EString(const EString &);     //copy constructor
 };
 
 //Constructor
-String::String(const char *original) {
+EString::EString(const char *original) {
     size = strlen(original);
     string = new char[size + 1];
     strcpy(string, original);
 }
 
 //Copy constructor which creates a new string
-String::String(const String &original) {
+EString::EString(const EString &original) {
     size = original.size;
     string = new char[size + 1];
     strcpy(string, original.string);
 }
 
 //Destructor
-String::~String() {
+EString::~EString() {
     delete [] string;
     size = 0;
 }
 
-//Replace with another String object
-void String::change(const char *original) {
+//Replace with another EString object
+void EString::change(const char *original) {
     delete [] string;
     size = strlen(original);
     string = new char[size + 1];
     strcpy(string, original);
 }
 
-void String::print() {
+void EString::print() {
     cout << string << endl;
 }
 

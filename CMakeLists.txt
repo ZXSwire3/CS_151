@@ -13,9 +13,11 @@ set(CMAKE_CXX_STANDARD 14)
 #add_executable(DynamicArray Mod3/DynamicArray/DynamicArray.cpp)
 #add_executable(Pie Mod3/Pie/Pie.cpp)
 #Module 4
-add_executable(Time Mod4/Lab4/Time.cpp)
-add_executable(DisplayBox Mod4/DisplayBox/DisplayBox.cpp)
-
-add_executable(Gym Mod5/Lab/Gym/Gym.cpp)
-add_executable(CopyConstructor Mod5/Lab/CopyConstructor/CopyConstructor.cpp)
-add_executable(Numbers Mod5/Numbers.cpp)
+#add_executable(Time Mod4/Lab4/Time.cpp)
+#add_executable(DisplayBox Mod4/DisplayBox/DisplayBox.cpp)
+#Module 5
+#add_executable(Gym Mod5/Lab/Gym/Gym.cpp)
+#add_executable(CopyConstructor Mod5/Lab/CopyConstructor/CopyConstructor.cpp)
+#add_executable(Numbers Mod5/Numbers.cpp)
+#Module 6
+add_executable(EString Mod6/Lab/EString/main.cpp)
