@@ -21,3 +21,4 @@ set(CMAKE_CXX_STANDARD 14)
 #add_executable(Numbers Mod5/Numbers.cpp)
 #Module 6
 add_executable(EString Mod6/Lab/EString/main.cpp)
+add_executable(TimeDate Mod6/Lab/TimeDate/TimeDate.cpp)

@@ -20,12 +20,12 @@ class EString {
         void change(const char *);   //reassign the string
         EString(const EString &);    //copy constructor
         int getSize();
-        EString &operator=(const EString &);
-        friend ostream &operator<<(ostream &, const EString &);
-        EString operator++();        //prefix
-        EString operator++(int);     //postfix
-        char &operator[](int);
-        friend EString operator+(const EString &, const EString &);
+        EString &operator=(const EString &); //Assignment overload
+        friend ostream &operator<<(ostream &, const EString &); //stream extraction overload
+        EString operator++();        //prefix overload
+        EString operator++(int);     //postfix overload
+        char &operator[](int);       //[] overload
+        friend EString operator+(const EString &, const EString &); //+ overload
 };
 
 //Constructor
@@ -69,11 +69,13 @@ EString&EString::operator=(const EString &original) {
     return *this;
 }
 
+//Stream extraction operator
 ostream &operator<<(ostream &out, const EString &output_EString) {
     out << output_EString.string;
     return out;
 }
 
+//Prefix Overload
 EString EString::operator++() {
     for (int i = 0; i < size; ++i) {
         if (string[i] >= 97) {
@@ -83,6 +85,7 @@ EString EString::operator++() {
     return *this;
 }
 
+//Postfix Overload
 EString EString::operator++(int) {
     EString copy = *this;
     for (int i = 0; i < copy.size; ++i) {
@@ -91,17 +94,16 @@ EString EString::operator++(int) {
     return copy;
 }
 
+//[] Overload
 char &EString::operator[](int index) {
     if (index < 0 || index > size) {
         cout << "Error";
         exit(EXIT_FAILURE);
     }
-    int *address;
-    address = reinterpret_cast<int *>(&string[index]);
-
     return string[index];
 }
 
+//+ Overload
 EString operator+(const EString &string1, const EString &string2) {
     char string3[string1.size + string2.size + 1];
     strcpy(string3, string1.string);
@@ -110,6 +112,7 @@ EString operator+(const EString &string1, const EString &string2) {
     return EString(string3);
 }
 
+//Return size
 int EString::getSize() {
     return size;
 }
