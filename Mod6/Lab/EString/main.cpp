@@ -12,35 +12,31 @@ int main() {
     cout << "First string: " << estring1 << endl
          << "Second string: " << estring2 << endl << endl;
 
-    //Create 3 new EStrings
-    EString originalEString = "New Year's Party at 8:30.";
-    //Use prefix overload
-    EString prefix = ++originalEString;
-    //Use postfix overload
-    EString postfix = originalEString++;
+    //Create new EString
+    EString original = "New Year's Party at 8:30.";
 
     //Print out EStrings
-    cout << "Original string:       " << originalEString << endl;
-    cout << "Using prefix operator: " << prefix << endl;
-    cout << "After using prefix:    " << postfix << endl << endl;
+    cout << "Original string:       " << original << endl;
+    cout << "Using prefix operator: " << ++original << endl;
+    cout << "After using prefix:    " << original++ << endl << endl;
 
     //User + overload
     cout << "Overloaded + operator: " << endl;
     EString all;
-    all = estring1 + estring2 + originalEString + prefix + postfix;
+    all = estring1 + estring2 + original + ++original + original++;
 
     //Print result of overloaded +
     cout << all << endl << endl;
 
     //Print each letter of the EString
     cout << "Original: ";
-    for (int i = 0; i < originalEString.getSize(); ++i) {
-        cout << originalEString[i] << " ";
+    for (int i = 0; i < original.getSize(); ++i) {
+        cout << original[i] << " ";
     }
     //Print each letter of the updated EString
     cout << endl << "Updated:  ";
-    for (int i = 0; i < originalEString.getSize(); ++i) {
+    for (int i = 0; i < original.getSize(); ++i) {
         //User overloaded prefix to print other value at [i]
-        cout << ++originalEString[i] << " ";
+        cout << ++original[i] << " ";
     }
 }

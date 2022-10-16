@@ -22,3 +22,4 @@ set(CMAKE_CXX_STANDARD 14)
 #Module 6
 add_executable(EString Mod6/Lab/EString/main.cpp)
 add_executable(TimeDate Mod6/Lab/TimeDate/TimeDate.cpp)
+add_executable(DayOfYear Mod6/DayOfYear.cpp)
