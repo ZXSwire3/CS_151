@@ -20,6 +20,12 @@ set(CMAKE_CXX_STANDARD 14)
 #add_executable(CopyConstructor Mod5/Lab/CopyConstructor/CopyConstructor.cpp)
 #add_executable(Numbers Mod5/Numbers.cpp)
 #Module 6
-add_executable(EString Mod6/Lab/EString/main.cpp)
-add_executable(TimeDate Mod6/Lab/TimeDate/TimeDate.cpp)
-add_executable(DayOfYear Mod6/DayOfYear.cpp)
+#add_executable(EString Mod6/Lab/EString/main.cpp)
+#add_executable(TimeDate Mod6/Lab/TimeDate/TimeDate.cpp)
+#add_executable(DayOfYear Mod6/DayOfYear.cpp)
+#Module 7
+add_executable(PeopleAtMCC Mod7/Lab/PeopleAtMCC/PeopleTester.cpp
+                           Mod7/Lab/PeopleAtMCC/PersonAtMCC.cpp
+                           Mod7/Lab/PeopleAtMCC/Student.cpp
+                           Mod7/Lab/PeopleAtMCC/Instructor.cpp
+                           Mod7/Lab/PeopleAtMCC/Staff.cpp)
