@@ -1,5 +1,5 @@
 /* Staff.cpp - Function definition file for Staff, child of PersonAtMCC
- * Author:     <your name>
+ * Author:     Ben Foltz
  * Module:     7
  * Project:    Lab, Part 1
  */
@@ -13,9 +13,9 @@ Staff::Staff(long id, string name, string address, string phone, string extensio
     setName(name);
     setAddress(address);
     setPhone(phone);
-    setExtension(extension);
-    setHireDate(hire_date);
-    setPayRate(pay_rate);
+    Staff::extension = extension;
+    Staff::hire_date = hire_date;
+    Staff::pay_rate = pay_rate;
 }
 
 // Getters for this class only

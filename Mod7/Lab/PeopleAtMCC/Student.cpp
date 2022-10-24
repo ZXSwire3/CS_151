@@ -1,5 +1,5 @@
 /* Student.cpp - Function definitions for Student class, child of PersonAtMCC
- * Author:     <your name>
+ * Author:     Ben Foltz
  * Module:     7
  * Project:    Lab, Part 1
  */
@@ -13,10 +13,10 @@ Student::Student(long id, string name, string address, string phone, string majo
     setName(name);
     setAddress(address);
     setPhone(phone);
-    setMajor(major);
-    setCreditsReceived(credits_received);
-    setAppliedTo4Year(applied_to_4_year);
-    setIsVeteran(is_veteran);
+    Student::major = major;
+    Student::credits_received = credits_received;
+    Student::applied_to_4_year = applied_to_4_year;
+    Student::is_veteran = is_veteran;
 }
 
 // Getters for this class only

@@ -1,5 +1,5 @@
 /* Instructor.h - Header for an Instructor, child of PersonAtMCC
- * Author:     <your name>
+ * Author:     Ben Foltz
  * Module:     7
  * Project:    Lab, Part 1
  * Description:

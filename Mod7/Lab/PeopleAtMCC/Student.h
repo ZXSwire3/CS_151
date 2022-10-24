@@ -1,5 +1,5 @@
 /* Student.h - Header file for Students at MiraCosta (child of PersonAtMCC)
- * Author:     <your name>
+ * Author:     Ben Foltz
  * Module:     7
  * Project:    Lab, Part 1
  * Description:
@@ -24,7 +24,7 @@
 #include "PersonAtMCC.h"
 using namespace std ;
 
-class Student: public PersonAtMCC {     /*** MAKE A CHILD OF PERSONATMCC WITH PUBLIC ACCESS ***/
+class Student: public PersonAtMCC {
 
     private :
         string major ;

@@ -1,5 +1,5 @@
 /* Instructor.cpp - Definition of functions for the Instructor subclass to PersonAtMCC
- * Author:     <your name>
+ * Author:     Ben Foltz
  * Module:     7
  * Project:    Lab, Part 1
  */
@@ -13,10 +13,10 @@ Instructor::Instructor(long id, string name, string address, string phone, strin
     setName(name);
     setAddress(address);
     setPhone(phone);
-    setDepartment(department);
-    setIsPermanent(is_permanent);
-    setPayRate(pay_rate);
-    setHours(hours);
+    Instructor::department = department;
+    Instructor::is_permanent = is_permanent;
+    Instructor::pay_rate = pay_rate;
+    Instructor::hours = hours;
 }
 
 

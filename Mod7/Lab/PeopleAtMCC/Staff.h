@@ -1,5 +1,5 @@
 /* Staff.h - Header for staff members at MCC
- * Author:     <your name>
+ * Author:     Ben Foltz
  * Module:     7
  * Project:    Lab
  * Description:

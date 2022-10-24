@@ -1,5 +1,5 @@
 /* PersonAtMCC.cpp - Function definitions for parent class
- * Author:     Chris Merrill
+ * Author:     Ben Foltz
  * Module:     7
  * Project:    Lab, Part 1
  * Description:  Function definitions for parent class - constructor,

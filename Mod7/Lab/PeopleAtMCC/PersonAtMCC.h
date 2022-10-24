@@ -1,5 +1,5 @@
 /* PersonAtMCC.h - Header for parent class of Instructor, Student, and Staff
- * Author:     <your name>
+ * Author:     Ben Foltz
  * Module:     7
  * Project:    Lab, Part 1
  * Description:

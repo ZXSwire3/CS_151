@@ -29,3 +29,9 @@ add_executable(PeopleAtMCC Mod7/Lab/PeopleAtMCC/PeopleTester.cpp
                            Mod7/Lab/PeopleAtMCC/Student.cpp
                            Mod7/Lab/PeopleAtMCC/Instructor.cpp
                            Mod7/Lab/PeopleAtMCC/Staff.cpp)
+add_executable(Animal Mod7/Lab/Animal/AnimalTester.cpp
+                      Mod7/Lab/Animal/Animal.cpp
+                      Mod7/Lab/Animal/Fox.cpp
+                      Mod7/Lab/Animal/Owl.cpp)
+add_executable(PString Mod7/Palindromes/PString.cpp)
+add_executable(Encrypt Mod7/EncryptableString/EncryptableString.cpp)
