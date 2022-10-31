@@ -1,3 +1,24 @@
+/* WordCounter.cpp - Prompt user for input and count the number of words that are in it.
+ * Author:     Ben Foltz
+ * Module:     8
+ * Project:    Homework 8, project 1
+ * Problem statement: Create a function that counts the number of words in a C String
+ *
+ * Algorithm:
+ *   1. Create int wordCounter(char str[]) function
+ *       a. Loop through c string
+ *          i. if character at string[i] is a space
+ *              1. increment word counter
+ *       b. return word count
+ *   2. int main()
+ *       a. Infinite loop
+ *           i. Create C String with max length
+ *          ii. Prompt user for input
+ *         iii. Get line and put in input C String
+ *          iv. Use strcmp to compare input and "quit"
+ *               1. exit program if they are the same
+ *           v. Call word counter function to print out how many words are in the input.
+ */
 #include <iostream>
 #include <algorithm>
 #include <cstring>

@@ -38,4 +38,5 @@ set(CMAKE_CXX_STANDARD 14)
 #Module 8
 add_executable(EncryptLab Mod8/Lab/EncryptableString/EncryptableString.cpp)
 add_executable(StringFunctions Mod8/Lab/StringFunctions/StringFunctions.cpp)
-add_executable(WordCounter Mod8/WordCounter.cpp)
+add_executable(WordCounter Mod8/WordCounter/WordCounter.cpp)
+add_executable(PasswordVerifier Mod8/PasswordVerifier/PasswordVerifier.cpp)
