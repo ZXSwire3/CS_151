@@ -36,7 +36,17 @@ set(CMAKE_CXX_STANDARD 14)
 #add_executable(PString Mod7/Palindromes/PString.cpp)
 #add_executable(Encrypt Mod7/EncryptableString/EncryptableString.cpp)
 #Module 8
-add_executable(EncryptLab Mod8/Lab/EncryptableString/EncryptableString.cpp)
-add_executable(StringFunctions Mod8/Lab/StringFunctions/StringFunctions.cpp)
-add_executable(WordCounter Mod8/WordCounter/WordCounter.cpp)
-add_executable(PasswordVerifier Mod8/PasswordVerifier/PasswordVerifier.cpp)
+#add_executable(EncryptLab Mod8/Lab/EncryptableString/EncryptableString.cpp)
+#add_executable(StringFunctions Mod8/Lab/StringFunctions/StringFunctions.cpp)
+#add_executable(WordCounter Mod8/WordCounter/WordCounter.cpp)
+#add_executable(PasswordVerifier Mod8/PasswordVerifier/PasswordVerifier.cpp)
+#Module 9
+#add_executable(BinaryFile Mod9/Lab/BinaryFile.cpp)
+#Module 11
+add_executable(DtB Mod11/Lab/DecimalToBinary/DecimalToBinary.cpp)
+add_executable(BtD Mod11/Lab/BinaryToDecimal/BinaryToDecimal.cpp)
+add_executable(Factorial Mod11/IterativeFactorial/IterativeFactorial.cpp)
+add_executable(RecursiveMember Mod11/RecursiveMember/RecursiveMember.cpp)
+add_executable(RecursivePalindrome Mod11/RecursivePalindrome/RecursivePalindrome.cpp)
+
+add_executable(test test.cpp)
