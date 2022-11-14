@@ -48,5 +48,3 @@ add_executable(BtD Mod11/Lab/BinaryToDecimal/BinaryToDecimal.cpp)
 add_executable(Factorial Mod11/IterativeFactorial/IterativeFactorial.cpp)
 add_executable(RecursiveMember Mod11/RecursiveMember/RecursiveMember.cpp)
 add_executable(RecursivePalindrome Mod11/RecursivePalindrome/RecursivePalindrome.cpp)
-
-add_executable(test test.cpp)
