@@ -59,6 +59,10 @@ set(CMAKE_CXX_STANDARD 14)
 #add_executable(SequenceAccumulation Mod13/Lab/SequenceAccumulation/SequenceAccumulation.cpp)
 #add_executable(DriverBCheckString Mod13/StringBoundExceptions/DriverBCheckString.cpp)
 #add_executable(SimpleVector Mod13/SimpleVector/SimpleVector.cpp)
-#Module 13
-add_executable(LinkedList Mod14/Lab/LinkedListTest.cpp)
-add_executable(SimpleLinkedList Mod14/SimpleLinkedList/LinkedList.cpp)
+#Module 14
+#add_executable(LinkedList Mod14/Lab/LinkedListTest.cpp)
+#add_executable(SimpleLinkedList Mod14/SimpleLinkedList/LinkedList.cpp)
+#Module 15
+#add_executable(Set Mod15/SetLinkedList.cpp)
+#Module 16
+add_executable(EBinaryTree Mod16/EBinaryTree.cpp)
