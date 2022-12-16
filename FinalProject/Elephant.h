@@ -20,6 +20,7 @@
 #include "Animal.h"
 using namespace std;
 
+//Inheritance
 class Elephant : public Animal{
     private:
         string breed;
@@ -47,6 +48,7 @@ class Elephant : public Animal{
             Elephant::color = color;
         }
 
+        //Overridden Polymorphism
         //Member functions
         void showInfo() override {
             cout << getName() << " is a " << getAge() << " year(s) old elephant that is a " << getBreed() << " elephant it's color is " << getColor() << endl;

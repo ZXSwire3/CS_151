@@ -1,3 +1,116 @@
+/* PlanetZoo.cpp - Prompt user to create 3 possible animals, elephant, koala, or snake
+ * Author:     Ben Foltz
+ * Project:    Final Project
+ * Problem statement: Create animals to fill the zoo
+ *
+ * Algorithm:
+ *   1. Create int choice for user input to choose which animal to make
+ *   2. Create string name and int age for the generic animal values
+ *   3. Create an elephant object with generic values
+ *   4. Create elephant specific variables, ie. breed and color
+ *   5. Create bool elephantMade to check if an elephant has already been made
+ *   6. Create a koala object with generic values
+ *   7. Create koala specific variables, ie. earSize
+ *   8. Create bool koalaMade to check if a koala has already been made
+ *   9. Create a snake object with generic values
+ *  10. Create snake specific variables, ie. isVenomous
+ *  11. Create bool snakeMade to check if a snake has already been made
+ *  12. Print out Title screen
+ *  13. do while loop until user types -1
+ *       a. Prompt user for input on which animal to create
+ *       b. switch (choice)
+ *           i. case 1
+ *               1. check if elephantMade
+ *                   a. print error
+ *                   b. break
+ *               2. Prompt user for name
+ *               3. Prompt user for age
+ *               4. Prompt user for breed
+ *               5. Prompt user for color
+ *               6. try
+ *                   a. set userMadeElephant to new values that are input from user
+ *                   b. set elephantMade to true
+ *               7. catch (Animal::olderThanLifeSpan)
+ *                   a. Print error
+ *                   b. break
+ *               8. break
+ *          ii. case 2
+ *               1. check if koalaMade
+ *                   a. print error
+ *                   b. break
+ *               2. Prompt user for name
+ *               3. Prompt user for age
+ *               4. Prompt user for earSize
+ *               5. try
+ *                   a. set userMadeKoala to new values that are input from user
+ *                   b. set koalaMade to true
+ *               6. catch (Animal::olderThanLifeSpan)
+ *                   a. Print error
+ *                   b. break
+ *               7. break
+ *         iii. case 3
+ *               1. check if snakeMade
+ *                   a. Print error
+ *                   b. break
+ *               2. Prompt user for name
+ *               3. Prompt user for age
+ *               4. Prompt user for venomousString
+ *               5. Convert user input from venomousString to lowercase
+ *               6. try
+ *                   a. if venomousString == "true"
+ *                       i. set isVenomous to true
+ *                      ii. set userMadeSnake to new values
+ *                   b. else
+ *                       i. set isVenomous to false
+ *                      ii. set userMadeSnake to new values
+ *                   c. set snakeMade to true
+ *               7. catch (Animal::olderThanLifeSpan)
+ *                   a. print error
+ *                   b. break
+ *               8. break
+ *          iv. case -1
+ *               1. break
+ *           v. default
+ *               1. Print error
+ *               2. break
+ *  14. Print out animals in zoo
+ *  15. check if elephantMade
+ *       a. Print elephant name
+ *       b. Print elephant ascii art
+ *  16. check if koalaMade
+ *       a. Print koala name
+ *       b. Print koala ascii art
+ *  17. check if snake made
+ *       a. Print snake name
+ *       b. Print snake ascii art
+ *  18. Print out facts about animals
+ *  19. check if elephantMade
+ *       a. call elephant.showInfo()
+ *  20. check if koalaMade
+ *       a. call koala.showInfo()
+ *  21. check if snake made
+ *       a. call snake.showInfo()
+ *  22. Print out animals pooping
+ *  23. check if elephantMade
+ *       a. call elephant.poop()
+ *  24. check if koalaMade
+ *       a. call koala.poop()
+ *  25. check if snake made
+ *       a. call snake.poop()
+ *  26. Print out animals reproducing
+ *  27. check if elephantMade
+ *       a. call elephant.createChildren()
+ *  28. check if koalaMade
+ *       a. call koala.createChildren()
+ *  29. check if snake made
+ *       a. call snake.createChildren()
+ *
+ *  Items used:
+ *   1. Inheritance             : Animal is parent class to elephant, koala and snake classes
+ *   2. Polymorphism            : Animal class had 3 virtual functions that were overloaded by the child classes
+ *   3. Exceptions              : Animal class created its own exception that is thrown if age > lifespan
+ *   4. Designed Abstract class : Animal class is an abstract class of my own design
+ */
 #include <iostream>
 #include "Animal.h"
 #include "Elephant.h"
@@ -56,9 +169,10 @@ int main() {
     do {
         // Prompt user for input
         cout << "\nAnimal Choices: " << endl
-             << "1. Elephant" << endl
-             << "2. Koala" << endl
-             << "3. Snake" << endl;
+             << " 1. Elephant" << endl
+             << " 2. Koala" << endl
+             << " 3. Snake" << endl
+             << "-1. Exit " << endl;
         cin >> choice;
 
         switch (choice) {
@@ -81,6 +195,7 @@ int main() {
                 cout << "Enter color: ";
                 cin >> color;
 
+                //Exception
                 try { // Try to set elephant to new values
                     // Set userMadeElephant to new values
                     userMadeElephant = Elephant(name, age, elephantLifespan, true, breed, color);
@@ -112,6 +227,7 @@ int main() {
                 cout << "Enter ear size: ";
                 cin >> earSize;
 
+                //Exception
                 try { // Try to set koala to new values
                     // Set userMadeKoala to new values
                     userMadeKoala = Koala(name, age, koalaLifespan, true, earSize);
@@ -135,7 +251,7 @@ int main() {
                     // exit switch
                     break;
                 }
-                //Prompt user
+                // Prompt user
                 cout << "Enter name: ";
                 cin >> name;
                 cout << "Enter age: ";
@@ -143,7 +259,12 @@ int main() {
                 cout << "Enter true or false if venomous: ";
                 cin >> venomousString;
 
+                // Convert venomousString to lowercase
+                for (char & i : venomousString) {
+                    i = tolower(i);
+                }
 
+                //Exception
                 try { // Try to set snake to new values
                     // Check value of user input
                     if (venomousString == "true") {
@@ -166,6 +287,8 @@ int main() {
                     break;
                 }
                 // exit switch
+                break;
+            case -1:
                 break;
             default:
                 // Print error

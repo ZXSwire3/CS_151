@@ -19,6 +19,7 @@
 #include "Animal.h"
 using namespace std;
 
+//Inheritance
 class Koala : public Animal{
     private:
         string earSize;
@@ -39,6 +40,7 @@ class Koala : public Animal{
             Koala::earSize = earSize;
         }
 
+        //Overridden Polymorphism
         //Member functions
         void showInfo() override {
             cout << getName() << " is a " << getAge() << " year(s) old koala that has " << getEarSize() << " sized ears" << endl;
@@ -47,7 +49,7 @@ class Koala : public Animal{
             cout << getName() << " pooped from a tree, you go to the base of the tree to pick it up" << endl;
         }
         void createChildren() override {
-            cout << getName() << " made a joey with another koala and they turned out to have " << getEarSize() << " just like " << getName() << endl;
+            cout << getName() << " made a joey with another koala and they turned out to have " << getEarSize() << " ears just like " << getName() << endl;
         }
 };
 

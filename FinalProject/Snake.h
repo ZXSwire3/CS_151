@@ -20,6 +20,7 @@
 #include "Animal.h"
 using namespace std;
 
+//Inheritance
 class Snake : public Animal{
 private:
     bool isVenomous;
@@ -40,6 +41,7 @@ public:
         Snake::isVenomous = isVenomous;
     }
 
+    //Overridden Polymorphism
     //Member functions
     void showInfo() override {
         cout << getName() << " is a " << getAge() << " year(s) old snake that is ";

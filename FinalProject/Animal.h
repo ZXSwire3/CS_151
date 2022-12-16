@@ -1,4 +1,4 @@
-/* Animal.h - Parent class to Elephant, Koala, and Snake
+/* Animal.h - Abstract parent class to Elephant, Koala, and Snake
  * Author:     Ben Foltz
  * Project:    Final Project
  * Description:
@@ -22,6 +22,7 @@
 #include <iostream>
 using namespace std;
 
+//Designed Abstract class
 class Animal {
     private:
         string name;
@@ -29,6 +30,7 @@ class Animal {
         int lifespan;
         bool isExotic;
     public:
+        //Exception
         //Class exception if the animal is older than it's lifespan
         class olderThanLifespan {};
 
@@ -39,6 +41,7 @@ class Animal {
             }
         };
 
+        //Polymorphism
         //Pure virtual destructor
         virtual ~Animal() = 0;
 
@@ -70,6 +73,7 @@ class Animal {
             Animal::isExotic;
         }
 
+        //Polymorphism
         //Virtual member functions
         virtual void showInfo() = 0;
         virtual void poop() = 0;
