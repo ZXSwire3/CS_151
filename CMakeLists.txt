@@ -49,6 +49,7 @@ set(CMAKE_CXX_STANDARD 14)
 #add_executable(RecursiveMember Mod11/RecursiveMember/RecursiveMember.cpp)
 #add_executable(RecursivePalindrome Mod11/RecursivePalindrome/RecursivePalindrome.cpp)
 #Module 12
+#add_executable(sort Mod12/AbstractSort/main.cpp)
 #add_executable(Program1 Mod12/Lab/Program1.cpp)
 #add_executable(Program2 Mod12/Lab/Program2.cpp)
 #add_executable(Program3 Mod12/Lab/Program3.cpp)
@@ -65,4 +66,5 @@ set(CMAKE_CXX_STANDARD 14)
 #Module 15
 #add_executable(Set Mod15/SetLinkedList.cpp)
 #Module 16
-add_executable(EBinaryTree Mod16/EBinaryTree.cpp)
+#add_executable(EBinaryTree Mod16/EBinaryTree.cpp)
+add_executable(PlanetZoo FinalProject/PlanetZoo.cpp)
